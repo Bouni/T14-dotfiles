@@ -24,6 +24,9 @@ dotfiles:
   d_dunst:
     src: config/dunst
     dst: ~/.config/dunst
+  d_polybar:
+    src: config/polybar
+    dst: ~/.config/polybar
 profiles:
   archlinux:
     dotfiles:
@@ -34,3 +37,4 @@ profiles:
     - f_i3_config
     - d_scripts
     - d_dunst
+    - d_polybar
