@@ -1,0 +1,7 @@
+
+alias dotdrop='/home/bouni/.dotdrop/dotdrop.sh --cfg=/home/bouni/.dotdrop/config.yaml'
+
+
+alias v='nvim'
+alias vi='nvim'
+alias vim='nvim'
