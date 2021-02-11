@@ -27,6 +27,9 @@ dotfiles:
   d_polybar:
     src: config/polybar
     dst: ~/.config/polybar
+  f_config.rasi:
+    src: config/rofi/config.rasi
+    dst: ~/.config/rofi/config.rasi
 profiles:
   archlinux:
     dotfiles:
@@ -38,3 +41,4 @@ profiles:
     - d_scripts
     - d_dunst
     - d_polybar
+    - f_config.rasi
