@@ -12,9 +12,13 @@ dotfiles:
   f_bouni.zsh-theme:
     src: oh-my-zsh/themes/bouni.zsh-theme
     dst: ~/.oh-my-zsh/themes/bouni.zsh-theme
+  f_config:
+    src: config/termite/config
+    dst: ~/.config/termite/config
 profiles:
   archlinux:
     dotfiles:
     - f_zshrc
     - f_zprofile
     - f_bouni.zsh-theme
+    - f_config
