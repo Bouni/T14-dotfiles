@@ -21,6 +21,9 @@ dotfiles:
   d_scripts:
     src: config/i3/scripts
     dst: ~/.config/i3/scripts
+  d_dunst:
+    src: config/dunst
+    dst: ~/.config/dunst
 profiles:
   archlinux:
     dotfiles:
@@ -30,3 +33,4 @@ profiles:
     - f_config
     - f_i3_config
     - d_scripts
+    - d_dunst
