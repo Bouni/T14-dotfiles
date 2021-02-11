@@ -1,0 +1,21 @@
+#!/bin/sh
+# Toggle on/off an second monitor
+
+main="eDP-1"
+second="DP-3"
+
+extramonitor() {
+  case "$1" in
+      "single") xrandr --output "$second" --off --output "$main" --auto;; 
+      "dual L") xrandr --output "$second" --mode 3840x2160 --rate 30.00 --left-of "$main";;
+      "dual R") xrandr --output "$second" --mode 3840x2160 --rate 30.00 --right-of "$main";;
+      *) notify-send "Multi Monitor" "Unknown Operation" ;;
+  esac
+}
+
+selection=$(printf "single\ndual L\ndual R\n" | dmenu -i -p "Monitor Configuration")
+
+extramonitor "$selection" 
+
+
+#&& fixdualhead -pd "1 2 3 4 5 6 7" -p "$main" -s "$second" -sd "8 9 0"

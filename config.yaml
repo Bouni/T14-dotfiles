@@ -15,6 +15,12 @@ dotfiles:
   f_config:
     src: config/termite/config
     dst: ~/.config/termite/config
+  f_i3_config:
+    src: config/i3/config
+    dst: ~/.config/i3/config
+  d_scripts:
+    src: config/i3/scripts
+    dst: ~/.config/i3/scripts
 profiles:
   archlinux:
     dotfiles:
@@ -22,3 +28,5 @@ profiles:
     - f_zprofile
     - f_bouni.zsh-theme
     - f_config
+    - f_i3_config
+    - d_scripts
