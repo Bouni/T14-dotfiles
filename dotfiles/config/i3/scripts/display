@@ -2,7 +2,7 @@
 # Toggle on/off an second monitor
 
 main="eDP-1"
-second="DP-3"
+second=$(xrandr| grep " connected" | grep -oP "^DP-\d")
 
 extramonitor() {
   case "$1" in
