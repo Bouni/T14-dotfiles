@@ -1,8 +1,0 @@
-
-alias dotdrop='~/.dotdrop/dotdrop.sh --cfg=~/.dotdrop/config.yaml'
-alias dotgit='git -C ~/.dotdrop'
-alias dotsync='dotgit pull && dotgit add -A && dotgit commit && dotgit push; dotdrop install'
-
-alias v='nvim'
-alias vi='nvim'
-alias vim='nvim'

@@ -6,9 +6,6 @@ dotfiles:
   f_zshrc:
     src: zshrc
     dst: ~/.zshrc
-  f_zprofile:
-    src: zprofile
-    dst: ~/.zprofile
   f_bouni.zsh-theme:
     src: oh-my-zsh/themes/bouni.zsh-theme
     dst: ~/.oh-my-zsh/themes/bouni.zsh-theme
@@ -34,7 +31,6 @@ profiles:
   archlinux:
     dotfiles:
     - f_zshrc
-    - f_zprofile
     - f_bouni.zsh-theme
     - f_config
     - f_i3_config
