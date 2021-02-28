@@ -18,6 +18,8 @@ set $reboot sudo -A reboot
 set $netrefresh --no-startup-id sudo -A systemctl restart NetworkManager
 set $hibernate sudo -A systemctl suspend
 
+for_window [class="^.*"] layout default
+
 # #---Gaps---# #
 for_window [class="^.*"] border pixel 1
 gaps inner $inner_gaps
@@ -43,6 +45,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # udiskie auto mount
 exec_always --no-startup-id udiskie
+
 
 # #---Basic Bindings---# #
 bindsym $mod+Return             exec $term
