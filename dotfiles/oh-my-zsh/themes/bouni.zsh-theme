@@ -32,6 +32,15 @@
 ### Segment drawing
 # A few utility functions to make it easy and re-usable to draw segmented prompts
 
+#prompt_segment black default "%(!.%{%F{yellow}%}.)%F{198}%n%F{253}@%F{214}%m"
+{%@@ if profile == "archlinux" @@%}
+USER_COLOR='#ff0087'
+HOST_COLOR='#ffaf00'
+{%@@ else @@%}
+USER_COLOR='#ff0087'
+HOST_COLOR='#005fff'
+{%@@ endif @@%}
+
 CURRENT_BG='NONE'
 
 case ${SOLARIZED_THEME:-dark} in
@@ -89,7 +98,7 @@ prompt_end() {
 # Context: user@hostname (who am I and where am I)
 prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-    prompt_segment black default "%(!.%{%F{yellow}%}.)%F{198}%n%F{253}@%F{214}%m"
+    prompt_segment black default "%(!.%{%F{yellow}%}.)%F{$USER_COLOR}%n%F{253}@%F{$HOST_COLOR}%m"
   fi
 }
 
