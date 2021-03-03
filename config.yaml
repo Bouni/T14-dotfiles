@@ -38,3 +38,7 @@ profiles:
     - d_dunst
     - d_polybar
     - f_config.rasi
+  horus:
+    dotfiles:
+    - f_zshrc
+    - f_bouni.zsh-theme
