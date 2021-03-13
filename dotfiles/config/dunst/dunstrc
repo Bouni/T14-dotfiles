@@ -7,9 +7,9 @@
     transparency = 20
     notification_height = 0
     separator_height = 2
-    padding = 0
+    padding = 4
     horizontal_padding = 8
-    frame_width = 1
+    frame_width = 2
     frame_color = "#546e7a"
 
     # Define a color for the separator.
@@ -25,7 +25,7 @@
 
     idle_threshold = 120
     #font = "NotoSansThin 14"
-    font = "InconsolataLight 13"
+    font = "InconsolataLight 8"
     line_height = 0
     markup = full
 
@@ -64,8 +64,9 @@
     class = Dunst
     startup_notification = false
     force_xinerama = false
+
 [experimental]
-    per_monitor_dpi = false
+    per_monitor_dpi = true
 
 [shortcuts]
     close = ctrl+space

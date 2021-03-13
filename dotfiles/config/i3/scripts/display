@@ -2,11 +2,21 @@
 # Toggle on/off an second monitor
 
 main="eDP-1"
+all=$(xrandr| grep -oP "^\w+-\d")
 second=$(xrandr| grep " connected" | grep -oP "^DP-\d")
+
+disable_all_external() {
+    xrandr| grep -oP "^\w+-\d" | while IFS= read -r display; do
+        if [ "$display" != "$main" ] 
+        then 
+           xrandr --output $display --off --output $main --auto 
+        fi
+    done
+}
 
 extramonitor() {
   case "$1" in
-      "single") xrandr --output "$second" --off --output "$main" --auto;; 
+      "single") disable_all_external;; 
       "dual L") xrandr --output "$second" --mode 3840x2160 --rate 30.00 --left-of "$main";;
       "dual R") xrandr --output "$second" --mode 3840x2160 --rate 30.00 --right-of "$main";;
       *) notify-send "Multi Monitor" "Unknown Operation" ;;

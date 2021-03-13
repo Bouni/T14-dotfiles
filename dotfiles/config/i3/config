@@ -52,7 +52,10 @@ bindsym $mod+Return             exec $term
 #bindsym $mod+Shift+Return       exec --no-startup-id samedir
 
 bindsym $mod+Shift+space        floating toggle
-bindsym $mod+space              focus mode_toggle
+
+bindsym $mod+h split h;exec notify-send 'tile horizontally'
+bindsym $mod+v split v;exec notify-send 'tile vertically'
+bindsym $mod+x split toggle ;exec notify-send 'tiling toggled'
 
 # bindsym $mod+BackSpace
 bindsym $mod+Shift+BackSpace    exec --no-startup-id prompt "Reboot computer?" "$reboot"
@@ -80,7 +83,7 @@ bindsym $mod+i                  exec --no-startup-id $browser
 #bindsym $mod+r                 exec $term -e lf
 #bindsym $mod+Shift+r           exec --no-startup-id winresize
 
-#bindsym $mod+t                 split toggle
+bindsym $mod+t                 split toggle
 #bindsym $mod+Shift+t           gaps inner current set $inner_gaps; gaps outer current set $outer_gaps
 
 #bindsym $mod+y                 exec $term -e calcurse
@@ -123,7 +126,7 @@ bindsym $mod+f                  fullscreen toggle
 #bindsym $mod+g                 workspace prev
 bindsym $mod+g                  exec --no-startup-id gimp; workspace $ws5
 
-bindsym $mod+h                  focus left
+#bindsym $mod+h                  focus left
 bindsym $mod+Shift+h            move left 30
 bindsym $mod+Ctrl+h             move workspace to output left
 
@@ -140,13 +143,13 @@ bindsym $mod+Shift+l            move right 30
 bindsym $mod+Ctrl+l             move workspace to output right
 
 
-bindsym $mod+x            exec --no-startup-id xset dpms force off && mpc pause && pauseallmpv && slock &
+#bindsym $mod+x            exec --no-startup-id xset dpms force off && mpc pause && pauseallmpv && slock &
 bindsym $mod+Shift+x        exec --no-startup-id prompt "Shutdown computer?" "$shutdown"
 
 bindsym $mod+c            exec --no-startup-id cabl
 bindsym $mod+Shift+c        exec --no-startup-id camtoggle
 
-bindsym $mod+v            exec --no-startup-id $term -e $EDITOR -c "VimwikiIndex"
+#bindsym $mod+v            exec --no-startup-id $term -e $EDITOR -c "VimwikiIndex"
 #bindsym $mod+Shift+v
 
 bindsym $mod+b            bar mode toggle
