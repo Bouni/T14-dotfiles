@@ -1,5 +1,5 @@
 polybar|notice:  Parsing config file: /home/bouni/.config/polybar/config.ini
-polybar|error: Invalid value for "module/pulseaudio-control.label-foreground", using default value (reason: The reference ${colors.cyan} does not exist (no fallback set))
+polybar|error: Invalid value for "module/pulseaudio-control.label-foreground", using default value (reason: The reference ${colors.foreground} does not exist (no fallback set))
 polybar|notice:  Loaded font "Iosevka Nerd Font:size=10" (name=Iosevka, offset=4, file=/home/bouni/.local/share/fonts/iosevka_nerd_font.ttf)
 polybar|notice:  Loaded font "Iosevka Nerd Font:size=10" (name=Iosevka, offset=3, file=/home/bouni/.local/share/fonts/iosevka_nerd_font.ttf)
 polybar|notice:  Loaded font "feather:size=12" (name=feather, offset=3, file=/home/bouni/.local/share/fonts/feather.ttf)
