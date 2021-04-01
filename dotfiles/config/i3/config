@@ -46,6 +46,8 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # udiskie auto mount
 exec_always --no-startup-id udiskie
 
+# i3 hooks
+exec_always --no-startup-id $HOME/.config/polybar/scripts/i3-hooks.py
 
 # #---Basic Bindings---# #
 bindsym $mod+Return             exec $term
