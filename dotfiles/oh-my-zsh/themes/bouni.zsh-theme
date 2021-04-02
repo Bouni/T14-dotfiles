@@ -38,7 +38,7 @@ USER_COLOR='#ff0087'
 HOST_COLOR='#ffaf00'
 {%@@ else @@%}
 USER_COLOR='#ff0087'
-HOST_COLOR='#005fff'
+HOST_COLOR='#00f92d'
 {%@@ endif @@%}
 
 CURRENT_BG='NONE'
