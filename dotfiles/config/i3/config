@@ -17,6 +17,7 @@ set $shutdown sudo -A shutdown -h now
 set $reboot sudo -A reboot
 set $netrefresh --no-startup-id sudo -A systemctl restart NetworkManager
 set $hibernate sudo -A systemctl suspend
+set $lockscreen i3lock-fancy-multimonitor -p
 
 for_window [class="^.*"] layout default
 
@@ -48,6 +49,10 @@ exec_always --no-startup-id udiskie
 
 # i3 hooks
 exec_always --no-startup-id $HOME/.config/polybar/scripts/i3-hooks.py
+
+# screen locker
+# exec_always --no-startup-id xautolock -time 5 -locker 'i3lock --color=000000' -corners +00-
+exec_always --no-startup-id xautolock -time 5 -locker 'i3lock-fancy-multimonitor -p' -corners +00-
 
 # #---Basic Bindings---# #
 bindsym $mod+Return             exec $term
@@ -236,7 +241,7 @@ bindsym $mod+F8        exec --no-startup-id mw sync
 bindsym $mod+F9        exec --no-startup-id dmenumount
 bindsym $mod+F10    exec --no-startup-id dmenuumount
 bindsym $mod+F11    exec --no-startup-id ducksearch
-bindsym $mod+F12    exec $term -e nmtui
+bindsym $mod+F12    exec $lockscreen
 bindsym $mod+Shift+F1    exec --no-startup-id toggle-welcome
 
 # #---Arrow Keys---# #
@@ -295,7 +300,7 @@ bindsym XF86Explorer        exec $term -e lf
 ##bindsym XF86Xfer        exec
 bindsym XF86WWW            exec --no-startup-id $BROWSER
 ##bindsym XF86DOS        exec
-bindsym XF86ScreenSaver        exec exec --no-startup-id lockscreen
+bindsym XF86ScreenSaver        exec exec --no-startup-id $lockscreen
 ##bindsym XF86RotateWindows    exec
 ##bindsym XF86TaskPane        exec
 ##bindsym XF86Favorites        exec
@@ -331,7 +336,7 @@ bindsym XF86Reload        restart
 bindsym XF86TouchpadToggle    exec --no-startup-id toggletouchpad
 bindsym XF86TouchpadOn        exec --no-startup-id synclient TouchpadOff=0
 bindsym XF86TouchpadOff        exec --no-startup-id synclient TouchpadOff=1
-bindsym XF86Suspend        exec --no-startup-id lockscreen
+bindsym XF86Suspend        exec --no-startup-id $lockscreen
 bindsym XF86Close        kill
 bindsym XF86WebCam        exec --no-startup-id camtoggle
 bindsym XF86Mail        exec $term -e neomutt && pkill -RTMIN+12 i3blocks
