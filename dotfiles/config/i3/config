@@ -37,15 +37,15 @@ set $ws10 "10"
 
 # Automatically move workspaces to external monitor if available
 workspace $ws1 output eDP-1
-workspace $ws2 output DP-4 DP-3 eDP-1
-workspace $ws3 output DP-4 DP-3 eDP-1
-workspace $ws4 output DP-4 DP-3 eDP-1
-workspace $ws5 output DP-4 DP-3 eDP-1
-workspace $ws6 output DP-4 DP-3 eDP-1 
-workspace $ws7 output DP-4 DP-3 eDP-1
-workspace $ws8 output DP-4 DP-3 eDP-1
-workspace $ws9 output DP-4 DP-3 eDP-1
-workspace $ws0 output DP-4 DP-3 eDP-1
+workspace $ws2 output DP-6 DP-5 DP-4 DP-3 eDP-1
+workspace $ws3 output DP-6 DP-5 DP-4 DP-3 eDP-1
+workspace $ws4 output DP-6 DP-5 DP-4 DP-3 eDP-1
+workspace $ws5 output DP-6 DP-5 DP-4 DP-3 eDP-1
+workspace $ws6 output DP-6 DP-5 DP-4 DP-3 eDP-1 
+workspace $ws7 output DP-6 DP-5 DP-4 DP-3 eDP-1
+workspace $ws8 output DP-6 DP-5 DP-4 DP-3 eDP-1
+workspace $ws9 output DP-6 DP-5 DP-4 DP-3 eDP-1
+workspace $ws0 output DP-6 DP-5 DP-4 DP-3 eDP-1
 
 
 
