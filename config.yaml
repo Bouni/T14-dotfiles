@@ -27,6 +27,9 @@ dotfiles:
   f_config.rasi:
     src: config/rofi/config.rasi
     dst: ~/.config/rofi/config.rasi
+  f_init.vim:
+    src: config/nvim/init.vim
+    dst: ~/.config/nvim/init.vim
 profiles:
   archlinux:
     dotfiles:
@@ -42,3 +45,4 @@ profiles:
     dotfiles:
     - f_zshrc
     - f_bouni.zsh-theme
+    - f_init.vim

@@ -111,3 +111,5 @@ alias vi='nvim'
 alias vim='nvim'
 
 alias ip='ip -c -br'
+
+alias gce='git commit --allow-empty -m "Empty commit to re-trigger CI"'
