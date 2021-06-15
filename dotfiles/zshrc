@@ -89,7 +89,7 @@ source $ZSH/oh-my-zsh.sh
 # fi
 
 export EDITOR='nvim'
-
+export FZF_DEFAULT_COMMAND="fd -L"
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 

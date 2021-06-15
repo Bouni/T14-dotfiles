@@ -76,7 +76,8 @@ exec_always --no-startup-id udiskie
 # i3 hooks
 exec_always --no-startup-id $HOME/.config/polybar/scripts/i3-hooks.py
 # screen locker
-exec_always --no-startup-id xautolock -time 5 -locker 'i3lock-fancy-multimonitor -p' -corners +00-
+exec_always --no-startup-id xautolock -detectsleep -time 5 -locker 'i3lock-fancy-multimonitor -p' -killtime 10 -killer "systemctl suspend" & 
+# -corners +00-
 
 
 
