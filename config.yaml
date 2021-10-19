@@ -46,3 +46,8 @@ profiles:
     - f_zshrc
     - f_bouni.zsh-theme
     - f_init.vim
+  ffw:
+    dotfiles:
+    - f_zshrc
+    - f_bouni.zsh-theme
+    - f_init.vim
